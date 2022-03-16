@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd">
+    <bean id="p" class="org.db.soft.base.Person">
+        <!-- 把pd注入给 personDAO这个属性 这个属性会调用setPersonDAO（pd）-->
+        <property name="personDAO" ref="pd"/>
+        
+    </bean>
+
+    <!-- 创建PersonDAOImplements对象-->
+    <bean id="pd" class="org.db.soft.base.dao.PersonDAOImplements"/>
+
+
+</beans>
